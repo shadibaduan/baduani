@@ -177,3 +177,44 @@ h1 , h2, h3, h4, h5, h6 {
 .reservar {
     grid-area: reservar;
 }
+
+.h1-contacto {
+    text-align: center;
+}
+
+.formulario-contacto {
+    height: 480px;
+    display: grid;
+    grid-template-areas:
+    "nombre-contacto apellido"
+    "email-contacto asunto"
+    "mensaje-contacto mensaje-contacto" 
+    "enviar enviar";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+}
+
+.formulario-contacto > div {
+    margin: auto;
+}
+
+.nombre-contacto {
+    grid-area: nombre-contacto;
+}
+
+.apellido {
+    grid-area: apellido;
+}
+
+.email-contacto {
+    grid-area: email-contacto;
+}
+
+.mensaje-contacto {
+    grid-area: mensaje-contacto;
+}
+
+.enviar {
+    grid-area: enviar;
+}
