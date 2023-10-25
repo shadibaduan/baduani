@@ -102,6 +102,12 @@ h1 , h2, h3, h4, h5, h6 {
     color: #b70f0a;
 }
 
+.parrafo-section3-link:hover {
+    opacity: 0.5;
+    font-size: larger;
+    text-decoration: underline;
+} 
+
 .container-imagen-section3 {
     width: 1200px;
     display: flex;
@@ -218,3 +224,4 @@ h1 , h2, h3, h4, h5, h6 {
 .enviar {
     grid-area: enviar;
 }
+
