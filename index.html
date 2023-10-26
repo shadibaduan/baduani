@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baduani | Inicio </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="./img/logobaduani.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -33,10 +34,54 @@
             </div>
         </section>
 
-        <section class="section-2">
-            <img class="imagen-section2" src="./img/falafel.jpg" alt="sandwich falafel">
-            <img class="imagen-section2" src="./img/Baklawa.jpg" alt="baklawa">
-            <img class="imagen-section2" src="./img/kebab.jpg" alt="kebab">
+        <section class="container section-2">
+           
+            <div class="row section-2">
+                <div class="col-md-4 imagen-section2">
+            
+                    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4500">
+                                <img src="./img/kebab.jpg" class="d-block w-100" alt="kebab">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4500">
+                                <img src="./img/parras.jpg" class="d-block w-100" alt="hojas de parra">
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="col-md-4 imagen-section2">
+            
+                    <div id="carouselExample2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4500">
+                                <img src="./img/Baklawa.jpg" class="d-block w-100" alt="baklawa">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4500">
+                                <img src="./img/baklawa2.jpg" class="d-block w-100" alt="baklawa">
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="col-md-4 imagen-section2">
+
+                    <div id="carouselExample3" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4500">
+                                <img src="./img/kebbe.jpg" class="d-block w-100" alt="kebbe">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4500">
+                                <img src="./img/kebbe-naie.jpg" class="d-block w-100" alt="kebbe naie">
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
         </section>
 
         <section class="section-3">
@@ -66,5 +111,6 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

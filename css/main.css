@@ -58,6 +58,7 @@ h1 , h2, h3, h4, h5, h6 {
 .titulo-hero {
     font-size: 50px;
     height: 65px;
+    margin-top: 1rem;
 }
 
 .parrafo-hero {
@@ -80,7 +81,6 @@ h1 , h2, h3, h4, h5, h6 {
     width: 320px;
     height: 220px;
 }
-
 
 .titulo-section3 {
     text-align: center;
@@ -120,7 +120,7 @@ h1 , h2, h3, h4, h5, h6 {
 }
 
 .footer {
-    margin-top: 2rem;
+    padding-top: 2rem;
     display: flex;
     color: #b70f0a;
     justify-content: space-evenly;
