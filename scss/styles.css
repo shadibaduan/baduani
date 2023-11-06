@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Alkatra;
+  background-color: #fefce0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #b70f0a;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  /*border: 1px solid black; */
+}
+.header .logo-imagen {
+  width: 120px;
+  height: 60px;
+}
+.header .nav .menu {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+.header .nav .menu .menu-item {
+  align-items: center;
+}
+.header .nav .menu .menu-item .menu-link {
+  color: #b70f0a;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+}
+
+.main .section-hero .container-imagen-section-hero {
+  display: flex;
+  margin-inline: auto;
+}
+.main .section-hero .container-imagen-section-hero .foto-baduani1 {
+  width: 1440px;
+  height: 555px;
+  margin: auto;
+}
+.main .section-hero .div-hero {
+  display: inline;
+  text-align: center;
+  justify-content: center;
+}
+.main .section-hero .div-hero .titulo-hero {
+  font-size: 50px;
+  height: 65px;
+  margin-top: 1rem;
+}
+.main .section-hero .div-hero .parrafo-hero {
+  font-size: 35px;
+  color: #b70f0a;
+}
+.main .section-hero .div-hero .parrafo-hero .restaurante-negrita {
+  font-weight: lighter;
+}
+.main .section-2 {
+  display: flex;
+  gap: 10rem;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+}
+.main .section-2 .imagen-section2 {
+  width: 320px;
+  height: 220px;
+  margin: auto;
+}
+.main .section-3 .titulo-section3 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 35px;
+  font-weight: lighter;
+  justify-content: center;
+}
+.main .section-3 .parrafo-section3 {
+  font-size: 20px;
+  color: #b70f0a;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.main .section-3 .parrafo-section3 .parrafo-section3-link {
+  text-decoration: none;
+  color: #b70f0a;
+}
+.main .section-3 .parrafo-section3 .parrafo-section3-link:hover {
+  opacity: 0.5;
+  font-size: larger;
+  text-decoration: underline;
+}
+.main .section-3 .container-imagen-section3 {
+  display: flex;
+  margin-inline: auto;
+}
+.main .section-3 .container-imagen-section3 .imagen-section3 {
+  width: 1100px;
+  height: 780px;
+  margin: auto;
+}
+
+.footer {
+  padding-top: 2.8rem;
+  display: flex;
+  color: #b70f0a;
+  justify-content: space-evenly;
+}
+
+.main-reservas .h1-reservas {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.main-reservas .formulario-reservas {
+  height: 480px;
+  display: grid;
+  grid-template-areas: "nombre-reservas email-reservas" "tel tel" "fecha personas" "mensaje-reservas mensaje-reservas" "reservar reservar";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.main-reservas .formulario-reservas .nombre-reservas {
+  grid-area: nombre-reservas;
+}
+.main-reservas .formulario-reservas .email-reservas {
+  grid-area: email-reservas;
+}
+.main-reservas .formulario-reservas .tel {
+  grid-area: tel;
+}
+.main-reservas .formulario-reservas .fecha {
+  grid-area: fecha;
+}
+.main-reservas .formulario-reservas .fecha > input {
+  width: 164px;
+}
+.main-reservas .formulario-reservas .personas {
+  grid-area: personas;
+}
+.main-reservas .formulario-reservas .mensaje-reservas {
+  grid-area: mensaje-reservas;
+}
+.main-reservas .formulario-reservas .reservar {
+  grid-area: reservar;
+}
+.main-reservas .formulario-reservas > div {
+  margin: auto;
+}
+
+.main-contacto .h1-contacto {
+  text-align: center;
+}
+.main-contacto .formulario-contacto {
+  height: 480px;
+  display: grid;
+  grid-template-areas: "nombre-contacto apellido" "email-contacto asunto" "mensaje-contacto mensaje-contacto" "enviar enviar";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.main-contacto .formulario-contacto .nombre-contacto {
+  grid-area: nombre-contacto;
+}
+.main-contacto .formulario-contacto .apellido {
+  grid-area: apellido;
+}
+.main-contacto .formulario-contacto .email-contacto {
+  grid-area: email-contacto;
+}
+.main-contacto .formulario-contacto .mensaje-contacto {
+  grid-area: mensaje-contacto;
+}
+.main-contacto .formulario-contacto .enviar {
+  grid-area: enviar;
+}
+.main-contacto .formulario-contacto > div {
+  margin: auto;
+}
+
+@media (max-width: 734px) {
+  .header {
+    flex-direction: column;
+  }
+  .logo-imagen {
+    margin-bottom: 1rem;
+  }
+  .footer {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: small;
+    flex-direction: column;
+  }
+  .contenedor-footer {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 573px) {
+  .h1-reservas {
+    font-size: x-large;
+  }
+  .h1-contacto {
+    font-size: x-large;
+  }
+  .menu {
+    flex-direction: column;
+    margin: auto;
+    font-size: small;
+    justify-content: center;
+    text-align: center;
+  }
+  .contenedor-footer {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1rem;
+    font-size: small;
+  }
+}
+@media (max-width: 420px) {
+  .formulario-reservas {
+    grid-template-areas: "nombre-reservas" "email-reservas" "tel" "fecha" "personas" "mensaje-reservas" "reservar";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  textarea {
+    width: 250px;
+  }
+}
+@media (max-width: 360px) {
+  .formulario-contacto {
+    grid-template-areas: "nombre-contacto" "apellido" "email-contacto" "asunto" "mensaje-contacto" "enviar";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}/*# sourceMappingURL=styles.css.map */
