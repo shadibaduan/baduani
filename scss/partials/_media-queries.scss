@@ -1,0 +1,249 @@
+@media (max-width: 1140px) {
+
+    .section-3 {
+        .container-imagen-section3 {
+
+            .imagen-section3 {
+             max-width: 900px;
+             max-height: 600px;
+            }
+        }
+    }
+}
+
+@media (max-width: 937px) {
+
+    .index {
+        display: flex;
+        flex-direction: column;
+
+        .nav {
+            margin: auto;
+            .menu {
+                margin-right: 2rem;
+            }
+        }
+
+        .logo {
+            margin: auto;
+            .logo-imagen{
+                margin-bottom: 1rem;
+                
+            }
+        }
+    }
+
+    .main {
+        .section-hero {
+            .container-imagen-section-hero{
+                max-width: 700px;
+                margin: auto;
+                
+                .foto-baduani1 {
+                    max-width: 700px;
+                }
+            }
+                
+        }
+
+        .section-3 {
+            .container-imagen-section3 {
+
+                .imagen-section3 {
+                 max-width: 700px;
+                 max-height: 450px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 734px) {
+    .header{
+        flex-direction: column;
+
+        .nav {
+            margin: auto;
+        }
+
+        .logo {
+            margin: auto;
+            .logo-imagen{
+                margin-bottom: 1rem;
+                
+            }
+        }
+       
+    }
+
+    .main {
+        .section-hero {
+            .container-imagen-section-hero{
+                max-width: 600px;
+                margin: auto;
+                
+                .foto-baduani1 {
+                    max-width: 600px;
+                    height: 300px;
+                }
+            }
+                
+        }
+
+        .section-3 {
+            .container-imagen-section3 {
+
+                .imagen-section3 {
+                 max-width: 550px;
+                 max-height: 300px;
+                }
+            }
+        }
+    }
+    
+    .footer {
+        margin-bottom: 1rem;
+        width: 100%;
+        font-size: small;
+        flex-direction: column;
+
+        .contenedor-footer {
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media (max-width: 573px){
+
+    .main {
+        .section-hero {
+            .container-imagen-section-hero{
+                max-width: 480px;
+                margin: auto;
+                
+                .foto-baduani1 {
+                    max-width: 480px;
+                    height: 200px;
+                }
+            }
+                
+        }
+
+        .section-3 {
+            .container-imagen-section3 {
+
+                .imagen-section3 {
+                 max-width: 400px;
+                 max-height: 220px;
+                }
+            }
+        }
+    }
+
+    .main-reservas{
+
+        .h1-reservas{
+            font-size: x-large;
+        }
+    }
+    
+    .main-contacto {
+
+        .h1-contacto{
+            font-size: x-large;
+        }
+    }
+   
+    .nav {
+        .menu {
+            flex-direction: column;
+            margin: auto;
+            font-size: small;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    
+    .footer{
+        .contenedor-footer {
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 1rem;
+            font-size: small;
+        }
+    }
+  
+}
+
+@media (max-width: 420px){
+
+    .main-reservas {
+        .formulario-reservas { 
+            grid-template-areas:
+            "nombre-reservas"
+            "email-reservas"
+            "tel"
+            "fecha" 
+            "personas"
+            "mensaje-reservas"
+            "reservar";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(7, 1fr);      
+        }
+    }
+   
+
+    textarea {
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 360px){
+
+    .main-contacto {
+        .formulario-contacto {
+            grid-template-areas:
+            "nombre-contacto"
+            "apellido"
+            "email-contacto"
+            "asunto"
+            "mensaje-contacto" 
+            "enviar";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+        }
+    }
+}
+
+@media (max-width: 341px) {
+    .main {
+        .section-hero {
+            .container-imagen-section-hero{
+                max-width: 341px;
+                margin: auto;
+                
+                .foto-baduani1 {
+                    max-width: 290px;
+                    height: 200px;
+                }
+            }
+        }
+
+        .section-3 {
+            .container-imagen-section3 {
+
+                .imagen-section3 {
+                 max-width: 290px;
+                 max-height: 220px;
+                }
+            }
+        }
+    }
+}

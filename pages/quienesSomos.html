@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baduani | Quienes Somos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="../img/logobaduani.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../scss/styles.css">
 </head>
 <body>
     <header class="header">
@@ -24,30 +25,79 @@
         </nav>
     </header>
 
-    <main>
-        <h1>BADUANI</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quam maiores beatae cupiditate eum numquam minus voluptas quidem officia sapiente, omnis ab. Nesciunt eaque nobis molestias amet quidem maxime necessitatibus.
-        Iste fugit hic neque beatae, ut accusamus ad omnis porro ea aliquid cum dignissimos nobis! Aut, ratione itaque dolorum quos beatae labore quaerat. Placeat debitis distinctio autem ex! Blanditiis, tempora!
-        Quidem nisi sequi magni laboriosam inventore nihil qui maiores natus officiis, amet molestias esse aliquam cupiditate iste tempora non ipsa provident magnam aperiam harum reprehenderit excepturi praesentium unde minus. Atque.
-        Omnis incidunt quod a quas ullam? Ipsum blanditiis, voluptas similique, sit quos exercitationem natus corporis voluptatem ipsa totam ipsam delectus mollitia aliquid sequi aliquam ab rerum nulla. Amet, aut harum.
-        Iure, officia velit neque rem, ut numquam provident ex sint unde itaque at quaerat a, quisquam repellat laboriosam necessitatibus aspernatur nesciunt voluptatum molestias debitis. Quae enim sequi nemo voluptatibus aut!</p>
+    <main class="main-quienes-somos">
+        <section class="section-quienes-somos">
+            <h1 class="h1-quienes-somos">BADUANI</h1>
+            <p class="parrafo-quienes-somos">Baduani es amor, familia y unión. A partir de estos valores trabajamos y compartimos nuestros sabores desde nuestra casa.</p>
+            <p class="parrafo2-quienes-somos"> Nuestra visión es lograr trasmitir estos valores para que nuestros clientes puedan vivenciarlos en cada mesa.</p>
+        </section>
+        <section class="container section2-quienes-somos">
+            <div class="row section-2">
+                <div class="col-md-4 imagen-section2">
+            
+                    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4500">
+                                <img src="../img/kebab.jpg" class="d-block w-100" alt="kebab">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4500">
+                                <img src="../img/parras.jpg" class="d-block w-100" alt="hojas de parra">
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="col-md-4 imagen-section2">
+            
+                    <div id="carouselExample2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4500">
+                                <img src="../img/Baklawa.jpg" class="d-block w-100" alt="baklawa">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4500">
+                                <img src="../img/baklawa2.jpg" class="d-block w-100" alt="baklawa">
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="col-md-4 imagen-section2">
+
+                    <div id="carouselExample3" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4500">
+                                <img src="../img/kebbe.jpg" class="d-block w-100" alt="kebbe">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4500">
+                                <img src="../img/kebbe-naie.jpg" class="d-block w-100" alt="kebbe naie">
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+        </section>
     </main>
 
     <footer class="footer">
-        <div>
+        <div class="contenedor-footer">
             <p>Información de contacto:</p>
             <p>Tel:4444444</p>
             <p>E-mail:baduani@gmail.com</p>
         </div> 
-        <div>           
+        <div class="contenedor-footer">           
             <p>Dirección:</p>
             <p>Malabia 1111 C.A.B.A</p>
         </div>
-        <div>
+        <div class="contenedor-footer">
             <p>Horario:</p>
             <p>Martes a domingo</p>
             <p>12 a 16hs. / 20 a 00hs.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

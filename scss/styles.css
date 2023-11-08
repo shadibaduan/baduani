@@ -114,6 +114,35 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
 }
 
+.main-contacto .h1-contacto {
+  text-align: center;
+}
+.main-contacto .formulario-contacto {
+  height: 480px;
+  display: grid;
+  grid-template-areas: "nombre-contacto apellido" "email-contacto asunto" "mensaje-contacto mensaje-contacto" "enviar enviar";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.main-contacto .formulario-contacto .nombre-contacto {
+  grid-area: nombre-contacto;
+}
+.main-contacto .formulario-contacto .apellido {
+  grid-area: apellido;
+}
+.main-contacto .formulario-contacto .email-contacto {
+  grid-area: email-contacto;
+}
+.main-contacto .formulario-contacto .mensaje-contacto {
+  grid-area: mensaje-contacto;
+}
+.main-contacto .formulario-contacto .enviar {
+  grid-area: enviar;
+}
+.main-contacto .formulario-contacto > div {
+  margin: auto;
+}
+
 .main-reservas .h1-reservas {
   text-align: center;
   margin-bottom: 1rem;
@@ -154,41 +183,85 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
-.main-contacto .h1-contacto {
+.main-quienes-somos .section-quienes-somos .h1-quienes-somos {
   text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-.main-contacto .formulario-contacto {
-  height: 480px;
-  display: grid;
-  grid-template-areas: "nombre-contacto apellido" "email-contacto asunto" "mensaje-contacto mensaje-contacto" "enviar enviar";
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+.main-quienes-somos .section-quienes-somos .parrafo-quienes-somos {
+  padding-left: 1rem;
+  text-align: center;
+  font-size: x-large;
 }
-.main-contacto .formulario-contacto .nombre-contacto {
-  grid-area: nombre-contacto;
+.main-quienes-somos .section-quienes-somos .parrafo2-quienes-somos {
+  padding-left: 1rem;
+  text-align: center;
+  margin-bottom: auto;
+  font-size: x-large;
 }
-.main-contacto .formulario-contacto .apellido {
-  grid-area: apellido;
-}
-.main-contacto .formulario-contacto .email-contacto {
-  grid-area: email-contacto;
-}
-.main-contacto .formulario-contacto .mensaje-contacto {
-  grid-area: mensaje-contacto;
-}
-.main-contacto .formulario-contacto .enviar {
-  grid-area: enviar;
-}
-.main-contacto .formulario-contacto > div {
-  margin: auto;
+.main-quienes-somos .section2-quienes-somos {
+  margin-top: 3rem;
 }
 
+@media (max-width: 1140px) {
+  .section-3 .container-imagen-section3 .imagen-section3 {
+    max-width: 900px;
+    max-height: 600px;
+  }
+}
+@media (max-width: 937px) {
+  .index {
+    display: flex;
+    flex-direction: column;
+  }
+  .index .nav {
+    margin: auto;
+  }
+  .index .nav .menu {
+    margin-right: 2rem;
+  }
+  .index .logo {
+    margin: auto;
+  }
+  .index .logo .logo-imagen {
+    margin-bottom: 1rem;
+  }
+  .main .section-hero .container-imagen-section-hero {
+    max-width: 700px;
+    margin: auto;
+  }
+  .main .section-hero .container-imagen-section-hero .foto-baduani1 {
+    max-width: 700px;
+  }
+  .main .section-3 .container-imagen-section3 .imagen-section3 {
+    max-width: 700px;
+    max-height: 450px;
+  }
+}
 @media (max-width: 734px) {
   .header {
     flex-direction: column;
   }
-  .logo-imagen {
+  .header .nav {
+    margin: auto;
+  }
+  .header .logo {
+    margin: auto;
+  }
+  .header .logo .logo-imagen {
     margin-bottom: 1rem;
+  }
+  .main .section-hero .container-imagen-section-hero {
+    max-width: 600px;
+    margin: auto;
+  }
+  .main .section-hero .container-imagen-section-hero .foto-baduani1 {
+    max-width: 600px;
+    height: 300px;
+  }
+  .main .section-3 .container-imagen-section3 .imagen-section3 {
+    max-width: 550px;
+    max-height: 300px;
   }
   .footer {
     margin-bottom: 1rem;
@@ -196,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: small;
     flex-direction: column;
   }
-  .contenedor-footer {
+  .footer .contenedor-footer {
     text-align: center;
     justify-content: center;
     margin: auto;
@@ -204,20 +277,32 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 573px) {
-  .h1-reservas {
+  .main .section-hero .container-imagen-section-hero {
+    max-width: 480px;
+    margin: auto;
+  }
+  .main .section-hero .container-imagen-section-hero .foto-baduani1 {
+    max-width: 480px;
+    height: 200px;
+  }
+  .main .section-3 .container-imagen-section3 .imagen-section3 {
+    max-width: 400px;
+    max-height: 220px;
+  }
+  .main-reservas .h1-reservas {
     font-size: x-large;
   }
-  .h1-contacto {
+  .main-contacto .h1-contacto {
     font-size: x-large;
   }
-  .menu {
+  .nav .menu {
     flex-direction: column;
     margin: auto;
     font-size: small;
     justify-content: center;
     text-align: center;
   }
-  .contenedor-footer {
+  .footer .contenedor-footer {
     text-align: center;
     justify-content: center;
     margin: auto;
@@ -226,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 420px) {
-  .formulario-reservas {
+  .main-reservas .formulario-reservas {
     grid-template-areas: "nombre-reservas" "email-reservas" "tel" "fecha" "personas" "mensaje-reservas" "reservar";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
@@ -236,9 +321,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 360px) {
-  .formulario-contacto {
+  .main-contacto .formulario-contacto {
     grid-template-areas: "nombre-contacto" "apellido" "email-contacto" "asunto" "mensaje-contacto" "enviar";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+  }
+}
+@media (max-width: 341px) {
+  .main .section-hero .container-imagen-section-hero {
+    max-width: 341px;
+    margin: auto;
+  }
+  .main .section-hero .container-imagen-section-hero .foto-baduani1 {
+    max-width: 290px;
+    height: 200px;
+  }
+  .main .section-3 .container-imagen-section3 .imagen-section3 {
+    max-width: 290px;
+    max-height: 220px;
   }
 }/*# sourceMappingURL=styles.css.map */

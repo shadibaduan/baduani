@@ -1,0 +1,60 @@
+.main-reservas {
+
+    .h1-reservas {
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .formulario-reservas {
+    
+        height: 480px;
+        display: grid;
+        grid-template-areas:
+        "nombre-reservas email-reservas"
+        "tel tel"
+        "fecha personas" 
+        "mensaje-reservas mensaje-reservas"
+        "reservar reservar";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+        .nombre-reservas {
+            grid-area: nombre-reservas;
+        }
+
+        .email-reservas {
+            grid-area: email-reservas;
+        }
+        
+        .tel {
+            grid-area: tel;
+        }
+
+        .fecha {
+            grid-area: fecha;
+        }
+
+        .fecha > input {
+            width: 164px;
+        }
+
+        .personas {
+            grid-area: personas;
+        }
+
+        .mensaje-reservas {
+            grid-area: mensaje-reservas;
+        }
+
+        .reservar {
+            grid-area: reservar;
+        }
+
+    }
+
+    .formulario-reservas > div {
+        margin: auto;
+    }
+
+}
