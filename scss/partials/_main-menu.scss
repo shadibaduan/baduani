@@ -1,0 +1,49 @@
+.main-menu {
+    .h1-menu {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .nav-menu {
+        margin-bottom: 5rem;
+        .lista-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            list-style-type: none;
+            gap: 1rem;
+
+            .item-menu {
+                align-items: center;
+                transition: 1.5s;
+                &:hover {
+                    transform: translate(0, 10px);
+                }
+
+                .link-menu {
+                    border-bottom: solid $colorSecundario;
+                    border-top: solid $colorSecundario;
+                    color: $colorPrincipal;
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+
+    .carta {
+        .h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        .lista-carta {
+            .item-carta {
+                color: $colorSecundario;
+                font-size: small;
+                text-align: center;
+                margin-bottom: .8rem;
+            }
+        }
+    }
+}

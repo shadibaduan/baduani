@@ -178,6 +178,12 @@
             font-size: small;
         }
     }
+
+    .nav-menu {
+        .lista-menu {
+            flex-direction: column;
+        }
+    }
   
 }
 

@@ -2,7 +2,7 @@
     .section-quienes-somos {
         .h1-quienes-somos {
         text-align: center;
-        padding-top: 1rem;
+        padding-top: 2rem;
         padding-bottom: 1rem;
         }
 
@@ -10,9 +10,11 @@
         padding-left: 1rem;
         text-align: center;
         font-size: x-large;
+        color: $colorPrincipal;
         }
 
         .parrafo2-quienes-somos {
+        color: $colorPrincipal;
         padding-left: 1rem;
         text-align: center;
         margin-bottom: auto;

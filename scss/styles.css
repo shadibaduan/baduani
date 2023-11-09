@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Alkatra;
-  background-color: #fefce0;
+  background-color: #f6e3ae;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 5rem;
   /*border: 1px solid black; */
 }
-.header .logo-imagen {
+.header .logo .logo-imagen {
   width: 120px;
   height: 60px;
 }
@@ -116,6 +116,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-contacto .h1-contacto {
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .main-contacto .formulario-contacto {
   height: 480px;
@@ -145,8 +147,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-reservas .h1-reservas {
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .main-reservas .formulario-reservas {
   height: 480px;
@@ -185,15 +187,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-quienes-somos .section-quienes-somos .h1-quienes-somos {
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
 }
 .main-quienes-somos .section-quienes-somos .parrafo-quienes-somos {
   padding-left: 1rem;
   text-align: center;
   font-size: x-large;
+  color: #b70f0a;
 }
 .main-quienes-somos .section-quienes-somos .parrafo2-quienes-somos {
+  color: #b70f0a;
   padding-left: 1rem;
   text-align: center;
   margin-bottom: auto;
@@ -201,6 +205,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-quienes-somos .section2-quienes-somos {
   margin-top: 3rem;
+}
+
+.main-menu .h1-menu {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.main-menu .nav-menu {
+  margin-bottom: 5rem;
+}
+.main-menu .nav-menu .lista-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 1rem;
+}
+.main-menu .nav-menu .lista-menu .item-menu {
+  align-items: center;
+  transition: 1.5s;
+}
+.main-menu .nav-menu .lista-menu .item-menu:hover {
+  transform: translate(0, 10px);
+}
+.main-menu .nav-menu .lista-menu .item-menu .link-menu {
+  border-bottom: solid rgb(65, 94, 47);
+  border-top: solid rgb(65, 94, 47);
+  color: #b70f0a;
+  text-decoration: none;
+}
+.main-menu .carta .h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.main-menu .carta .lista-carta .item-carta {
+  color: rgb(65, 94, 47);
+  font-size: small;
+  text-align: center;
+  margin-bottom: 0.8rem;
 }
 
 @media (max-width: 1140px) {
@@ -308,6 +352,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
     margin-bottom: 1rem;
     font-size: small;
+  }
+  .nav-menu .lista-menu {
+    flex-direction: column;
   }
 }
 @media (max-width: 420px) {
