@@ -15,9 +15,9 @@
 
             .item-menu {
                 align-items: center;
-                transition: 1.5s;
+                transition: 1.2s ease-in-out;
                 &:hover {
-                    transform: translate(0, 10px);
+                    transform: translateY(10px) scale(1.20) rotate(5deg) skew(10deg);
                 }
 
                 .link-menu {

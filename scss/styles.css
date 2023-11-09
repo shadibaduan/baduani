@@ -56,10 +56,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 50px;
   height: 65px;
   margin-top: 1rem;
+  animation-name: color;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 .main .section-hero .div-hero .parrafo-hero {
   font-size: 35px;
-  color: #b70f0a;
+  animation-name: color;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 .main .section-hero .div-hero .parrafo-hero .restaurante-negrita {
   font-weight: lighter;
@@ -107,6 +114,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
 }
 
+@keyframes color {
+  0% {
+    color: #b70f0a;
+  }
+  50% {
+    color: rgb(65, 94, 47);
+  }
+  100% {
+    color: #b70f0a;
+  }
+}
 .footer {
   padding-top: 2.8rem;
   display: flex;
@@ -224,10 +242,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-menu .nav-menu .lista-menu .item-menu {
   align-items: center;
-  transition: 1.5s;
+  transition: 1.2s ease-in-out;
 }
 .main-menu .nav-menu .lista-menu .item-menu:hover {
-  transform: translate(0, 10px);
+  transform: translateY(10px) scale(1.2) rotate(5deg) skew(10deg);
 }
 .main-menu .nav-menu .lista-menu .item-menu .link-menu {
   border-bottom: solid rgb(65, 94, 47);

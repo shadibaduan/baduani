@@ -23,11 +23,18 @@
                 font-size: 50px;
                 height: 65px;
                 margin-top: 1rem;
+                animation-name: color;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
             }
 
             .parrafo-hero {
                 font-size: 35px;
-                color: $colorPrincipal;
+                animation-name: color;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
 
                 .restaurante-negrita {
                     font-weight: lighter;
@@ -88,5 +95,18 @@
             margin: auto;
             }
         }
+    }
+}
+
+
+@keyframes color {
+    0% {
+        color: $colorPrincipal;
+    }
+    50% {
+        color: $colorSecundario;
+    }
+    100% {
+        color: $colorPrincipal;
     }
 }
