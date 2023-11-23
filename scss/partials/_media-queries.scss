@@ -19,9 +19,6 @@
 
         .nav {
             margin: auto;
-            .menu {
-                margin-right: 2rem;
-            }
         }
 
         .logo {
@@ -118,8 +115,18 @@
     }
 }
 
+@media (max-width: 637px) {
+    .header {
+        font-size: small;
+    }
+}
+
 @media (max-width: 573px){
 
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
     .main {
         .section-hero {
             .container-imagen-section-hero{

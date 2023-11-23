@@ -1,6 +1,18 @@
 .footer {
-    padding-top: 2.8rem;
+    //padding-top: 2rem;
     display: flex;
     color: $colorPrincipal;
     justify-content: space-evenly;
+    padding-top: 2rem;
+    font-size: smaller;
+    background-image: linear-gradient($colorFondo1, $colorFondo3);
+
+    .contenedor-footer {
+        background-image: linear-gradient($colorFondo1, $colorFondo3);
+        border-radius: 10px;
+        .parrafo-footer {
+            background-image: linear-gradient($colorFondo1, $colorFondo3);
+            border-radius: 10px;
+        }
+    }
 }
