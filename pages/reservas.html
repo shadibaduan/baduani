@@ -29,29 +29,27 @@
 
     <main class="main-reservas">
         <h1 class="h1-reservas">RESERVAS</h1>
-        <form class="formulario-reservas">
+        <form class="formulario-reservas" onsubmit="hacerReservaHTML(event)">
             <div class="nombre-reservas">
-                <input type="text" placeholder="Nombre" required>
-            </div>
-            <div class="email-reservas">
-            <input type="email"  placeholder="email" required>
-            </div>
-            <div class="tel">
-                <input type="tel" placeholder="Teléfono" required>
+                <input type="text" id="nombreInput" placeholder="Nombre" required>
             </div>
             <div class="fecha">
-                <input type="date" placeholder="FECHA" required>
+                <input type="date" id="fechaInput" placeholder="FECHA" required>
+            </div>
+            <div class="hora">
+                <input type="time" id="horaInput" placeholder="HORA" required>
             </div>
             <div class="personas">
-                <input type="number" placeholder="cantidad de personas" required>
-            </div>
-            <div class="mensaje-reservas">
-                <textarea cols="60" rows="5" placeholder="Mensaje" required></textarea>
+                <input type="number" id="personasInput" placeholder="Cantidad de personas" required>
             </div>
             <div class="reservar">
-                <input type="submit" value="RESERVAR">
+                <button type="submit">RESERVAR</button>
             </div>
         </form>
+        <div class="reservas-actuales">
+            <button onclick="mostrarReservasHTML()">Mostrar Reservas</button>
+            <div id="resultadoReservas"></div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -74,5 +72,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
