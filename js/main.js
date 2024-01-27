@@ -1,20 +1,27 @@
 // Objeto para almacenar reservas
 let reservas = [];
 
-// Función para realizar una reserva y notificar por HTML
+// Función para realizar una reserva y notificar por SweetAlert
 function hacerReservaHTML(event) {
     event.preventDefault(); // Evita que se envíe el formulario y recargue la página
 
     let nombre = document.getElementById('nombreInput').value;
     let fecha = document.getElementById('fechaInput').value;
     let hora = document.getElementById('horaInput').value;
-    let personas = document.getElementById('personasInput').value;
+    let personasInput = document.getElementById('personasInput');
+    let personas = parseInt(personasInput.value);
+
+    // Validar que la cantidad de personas sea un número positivo
+    if (personas <= 0 || isNaN(personas)) {
+        mostrarAlertaError("La cantidad de personas debe ser un número positivo.");
+        return; // Salir de la función si la validación falla
+    }
 
     // Verificar si ya existe una reserva para la misma fecha y hora
     const reservaExistente = reservas.find(reserva => reserva.fecha === fecha && reserva.hora === hora);
 
     if (reservaExistente) {
-        document.getElementById('resultadoReservas').innerHTML = "¡Lo siento, esa fecha y hora ya están ocupadas!";
+        mostrarAlertaError("Lo siento, esa fecha y hora ya están ocupadas!");
     } else {
         // Crear un objeto reserva
         let reserva = {
@@ -27,28 +34,97 @@ function hacerReservaHTML(event) {
         // Agregar la reserva al array
         reservas.push(reserva);
 
-        // Mostrar mensaje en HTML
-        document.getElementById('resultadoReservas').innerHTML = "Reserva realizada con éxito. Gracias, " + nombre + "!";
+        // Guardamos las reservas en el localStorage
+        localStorage.setItem('reservas', JSON.stringify(reservas));
+
+        // Mostrar mensaje con SweetAlert
+        mostrarAlertaExito(`Reserva realizada con éxito. Gracias, ${nombre}!`);
     }
 }
 
-// Función para mostrar todas las reservas en HTML
-function mostrarReservasHTML() {
-    let resultadoHTML = "";
+// Función para mostrar una alerta de éxito con SweetAlert
+function mostrarAlertaExito(mensaje) {
+    Swal.fire({
+        icon: 'success',
+        title: '¡Éxito!',
+        text: mensaje,
+    });
+}
 
+// Función para mostrar una alerta de error con SweetAlert
+function mostrarAlertaError(mensaje) {
+    Swal.fire({
+        icon: 'error',
+        title: '¡Error!',
+        text: mensaje,
+    });
+}
+
+// Función para mostrar todas las reservas con SweetAlert
+function mostrarReservasSweetAlert() {
     if (reservas.length === 0) {
-        resultadoHTML = "No hay reservas registradas.";
+        mostrarAlertaExito("No hay reservas registradas.");
     } else {
-        resultadoHTML = "<h2>Reservas:</h2>";
         for (let i = 0; i < reservas.length; i++) {
-            resultadoHTML += "<p>Nombre: " + reservas[i].nombre +
-                            "<br>Fecha: " + reservas[i].fecha +
-                            "<br>Hora: " + reservas[i].hora +
-                            "<br>Personas: " + reservas[i].personas + "</p>";
+            mostrarAlertaReserva(reservas[i]);
         }
     }
-
-    // Mostrar resultado en HTML
-    document.getElementById('resultadoReservas').innerHTML = resultadoHTML;
 }
 
+// Función para mostrar una alerta de reserva con SweetAlert
+function mostrarAlertaReserva(reserva) {
+    Swal.fire({
+        icon: 'info',
+        title: 'Reserva',
+        html: `<strong>Nombre:</strong> ${reserva.nombre}<br>` +
+              `<strong>Fecha:</strong> ${reserva.fecha}<br>` +
+              `<strong>Hora:</strong> ${reserva.hora}<br>` +
+              `<strong>Personas:</strong> ${reserva.personas}`,
+    });
+}
+
+// Objeto para almacenar posts
+let posts = [];
+
+// Función para cargar datos desde la API JSONPlaceholder
+function cargarDatosDesdeAPI() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(datos => {
+            posts = datos;
+            mostrarDatosDesdeAPI();
+        })
+        .catch(error => console.error('Error al cargar datos desde la API:', error));
+}
+
+// Función para mostrar posts en HTML
+function mostrarDatosDesdeAPI() {
+    const resultadoReservas = document.getElementById('resultadoReservas');
+
+    if (posts.length === 0) {
+        resultadoReservas.innerHTML = "No hay datos disponibles desde la API.";
+    } else {
+        const postsHTML = posts.map(generarPostHTML).join('');
+        resultadoReservas.innerHTML = `<h2>Posts desde la API:</h2>${postsHTML}`;
+    }
+}
+
+// Función para generar el HTML de cada post
+function generarPostHTML(post) {
+    return `
+        <div class="post">
+            <h3>${post.title}</h3>
+            <p>${post.body}</p>
+        </div>
+    `;
+}
+
+// Ejecución de lógica al cargar la página
+window.onload = function () {
+    // Carga de reservas desde el localStorage al cargar la página
+    const reservasGuardadas = localStorage.getItem('reservas');
+    if (reservasGuardadas) {
+        reservas = JSON.parse(reservasGuardadas);
+        mostrarReservasHTML();
+    }
+};
