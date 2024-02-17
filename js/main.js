@@ -11,6 +11,14 @@ function hacerReservaHTML(event) {
     let personasInput = document.getElementById('personasInput');
     let personas = parseInt(personasInput.value);
 
+    // Validar que la fecha no sea anterior a la fecha actual
+    let fechaActual = new Date();
+    let fechaSeleccionada = new Date(fecha);
+    if (fechaSeleccionada < fechaActual) {
+        mostrarAlertaError("La fecha seleccionada ya ha pasado. Por favor, elige una fecha futura.");
+        return; // Salir de la función si la validación falla
+    }
+
     // Validar que la cantidad de personas sea un número positivo
     if (personas <= 0 || isNaN(personas)) {
         mostrarAlertaError("La cantidad de personas debe ser un número positivo.");
@@ -92,20 +100,20 @@ function cargarDatosDesdeAPI() {
         .then(response => response.json())
         .then(datos => {
             posts = datos;
-            mostrarDatosDesdeAPI();
+            mostrarDatosDesdeAPI(); // Llamar a la función para mostrar los datos
         })
         .catch(error => console.error('Error al cargar datos desde la API:', error));
 }
 
 // Función para mostrar posts en HTML
 function mostrarDatosDesdeAPI() {
-    const resultadoReservas = document.getElementById('resultadoReservas');
+    const resultadoAPI = document.getElementById('resultadoAPI');
 
     if (posts.length === 0) {
-        resultadoReservas.innerHTML = "No hay datos disponibles desde la API.";
+        resultadoAPI.innerHTML = "No hay datos disponibles desde la API.";
     } else {
         const postsHTML = posts.map(generarPostHTML).join('');
-        resultadoReservas.innerHTML = `<h2>Posts desde la API:</h2>${postsHTML}`;
+        resultadoAPI.innerHTML = `<h2>Posts desde la API:</h2>${postsHTML}`;
     }
 }
 
@@ -127,4 +135,10 @@ window.onload = function () {
         reservas = JSON.parse(reservasGuardadas);
         mostrarReservasHTML();
     }
+
+    // Cargar datos desde la API al cargar la página
+    cargarDatosDesdeAPI();
 };
+
+// Event listener para el formulario de reserva
+document.getElementById('formularioReserva').addEventListener('submit', hacerReservaHTML);
